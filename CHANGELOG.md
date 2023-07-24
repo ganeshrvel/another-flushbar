@@ -1,3 +1,23 @@
+## 1.12.30 - 2023-11-05
+- bump version
+## 1.12.30-dev.1 - 2023-09-05
+- fix type 'BorderRadius?' can't be assigned to the parameter type 'BorderRadiusGeometry' (https://github.com/cmdrootaccess/another-flushbar/issues/106)
+## 1.12.29 - 2022-09-08
+- flutter format code
+## 1.11.29 - 2022-09-08
+- update license to MIT
+## 1.10.29 - 2022-17-05
+- merged flutter v3 #66 from X-SLAYER/main
+## 1.10.28 - 2021-12-09
+- revert updated screenshots
+## 1.10.27 - 2021-12-09
+- merge updates
+## 1.10.26 - 2021-11-24
+- Update screenshot links
+## 1.10.25 - 2021-11-01
+- RTL text
+## 1.10.24 - 2021-07-6
+- Implemented endOffset parameter
 ## 1.10.23 - 2021-06-4
 - Prevents hiding flushbar when user clicks the back button.
 ## 1.10.22 - 2021-05-14
