@@ -3,6 +3,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:flutter/widgets.dart';
 
 import 'flushbar_route.dart' as route;
 
@@ -61,7 +62,8 @@ class Flushbar<T> extends StatefulWidget {
       this.routeColor,
       this.userInputForm,
       this.endOffset,
-      this.flushbarRoute // Please dont init this
+      this.alignment = Alignment.centerRight,
+      this.flushbarRoute,// Please dont init this
       })
       // ignore: prefer_initializing_formals
       : onStatusChanged = onStatusChanged,
@@ -225,6 +227,8 @@ class Flushbar<T> extends StatefulWidget {
   /// Choose if the flushbar must be displayed inside a safeArea
   /// For custom safeArea you can use margin instead
   final bool safeArea;
+
+  final AlignmentGeometry alignment;
 
   route.FlushbarRoute<T?>? flushbarRoute;
 
@@ -398,6 +402,7 @@ class _FlushbarState<K extends Object?> extends State<Flushbar<K>>
   @override
   Widget build(BuildContext context) {
     return Align(
+      alignment: widget.alignment,
       heightFactor: 1.0,
       child: Material(
         color: widget.flushbarStyle == FlushbarStyle.FLOATING
@@ -746,7 +751,7 @@ class _FlushbarState<K extends Object?> extends State<Flushbar<K>>
           style: TextStyle(
               fontSize: widget.titleSize ?? 16.0,
               color: widget.titleColor ?? Colors.white,
-              fontWeight: FontWeight.bold),
+              fontWeight: FontWeight.w600),
         );
   }
 
